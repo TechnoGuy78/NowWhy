@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NOW WHY — Brasserie · Pizzeria · Cocktails · Glacier à Roanne</title>
+    <meta name="description" content="NOW WHY, brasserie, pizzeria, bar à cocktails et glacier à Roanne (42). Ouvert du café du matin aux cocktails du soir, place de la Promenade Populle. Appelez le 04 77 71 30 96." />
+    <meta name="keywords" content="bar Roanne, brasserie Roanne, cocktails Roanne, pizzeria Roanne, glacier Roanne, restaurant Roanne, NOW WHY" />
+    <meta property="og:title" content="NOW WHY — Brasserie · Pizzeria · Cocktails · Glacier à Roanne" />
+    <meta property="og:description" content="Un lieu qui vit du café du matin aux cocktails du soir. 12 Place de la Promenade Populle, Roanne." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="fr_FR" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- ==================== HEADER / NAVIGATION ==================== -->
+    <header class="header" data-testid="site-header">
+        <div class="container header-inner">
+            <a href="#accueil" class="logo" data-testid="header-logo">NOW <span>WHY</span></a>
+            <nav class="nav-desktop" data-testid="desktop-nav">
+                <a href="#accueil" data-testid="nav-link-accueil">Accueil</a>
+                <a href="#concept" data-testid="nav-link-concept">Concept</a>
+                <a href="#carte" data-testid="nav-link-carte">Carte</a>
+                <a href="#galerie" data-testid="nav-link-galerie">Galerie</a>
+                <a href="#avis" data-testid="nav-link-avis">Avis</a>
+                <a href="#horaires" data-testid="nav-link-horaires">Horaires &amp; Contact</a>
+            </nav>
+            <div class="header-actions">
+                <a href="tel:0477713096" class="btn btn-primary btn-sm" data-testid="header-call-button">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    Nous appeler
+                </a>
+                <button class="burger" id="burger" aria-label="Menu" data-testid="mobile-menu-button">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+        <nav class="nav-mobile" id="nav-mobile" data-testid="mobile-nav">
+            <a href="#accueil" data-testid="mobile-nav-link-accueil">Accueil</a>
+            <a href="#concept" data-testid="mobile-nav-link-concept">Concept</a>
+            <a href="#carte" data-testid="mobile-nav-link-carte">Carte</a>
+            <a href="#galerie" data-testid="mobile-nav-link-galerie">Galerie</a>
+            <a href="#avis" data-testid="mobile-nav-link-avis">Avis</a>
+            <a href="#horaires" data-testid="mobile-nav-link-horaires">Horaires &amp; Contact</a>
+            <a href="tel:0477713096" class="btn btn-primary btn-sm" data-testid="mobile-call-button">04 77 71 30 96</a>
+        </nav>
+    </header>
+
+    <!-- ==================== HERO ==================== -->
+    <section id="accueil" class="hero" data-testid="hero-section">
+        <!-- PHOTO HERO : remplacez le bloc "photo-placeholder" ci-dessous par :
+             <img src="photos/bar.jpg" alt="Le bar NOW WHY" class="hero-photo" />
+             (mettez votre image dans un dossier "photos" à côté de index.html) -->
+        <div class="hero-bg">
+            <div class="photo-placeholder hero-photo-slot" data-testid="hero-photo-placeholder">
+                <img src="images/Nowwhy.png" alt="Le bar NOW WHY" class="hero-photo" />
+            </div>
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="container hero-content">
+            <p class="kicker reveal" data-testid="hero-kicker">Roanne — Place de la Promenade Populle</p>
+            <h1 class="hero-title neon reveal" data-testid="hero-title">NOW WHY</h1>
+            <p class="hero-tagline reveal" data-testid="hero-tagline">Le lieu qui vit du café du matin aux cocktails du soir.</p>
+            <p class="hero-activities reveal" data-testid="hero-activities">Brasserie · Pizzeria · Cocktails · Glaces</p>
+            <div class="hero-ctas reveal">
+                <a href="tel:0477713096" class="btn btn-primary" data-testid="hero-call-cta">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    04 77 71 30 96
+                </a>
+                <a href="#carte" class="btn btn-outline" data-testid="hero-menu-cta">Voir la carte</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== RUBAN DÉFILANT ==================== -->
+    <div class="marquee" data-testid="marquee-ribbon" aria-hidden="true">
+        <div class="marquee-track">
+            <span>Brasserie</span><i>•</i><span>Pizzeria</span><i>•</i><span>Cocktails</span><i>•</i><span>Glacier</span><i>•</i>
+            <span>Brasserie</span><i>•</i><span>Pizzeria</span><i>•</i><span>Cocktails</span><i>•</i><span>Glacier</span><i>•</i>
+            <span>Brasserie</span><i>•</i><span>Pizzeria</span><i>•</i><span>Cocktails</span><i>•</i><span>Glacier</span><i>•</i>
+            <span>Brasserie</span><i>•</i><span>Pizzeria</span><i>•</i><span>Cocktails</span><i>•</i><span>Glacier</span><i>•</i>
+        </div>
+    </div>
+
+    <!-- ==================== CONCEPT ==================== -->
+    <section id="concept" class="section" data-testid="concept-section">
+        <div class="container">
+            <div class="grid-2">
+                <div class="reveal">
+                    <p class="kicker" data-testid="concept-label">Le concept</p>
+                    <h2 data-testid="concept-title">Un seul lieu, <span class="text-copper">mille moments</span></h2>
+                    <p class="lead" data-testid="concept-text-1">Chez NOW WHY, on ne choisit pas entre brasserie, pizzeria et bar à cocktails — on fait tout, et on le fait avec le sourire. Autour du grand bar incurvé, le lieu se réveille avec les cafés du matin, vibre au rythme des déjeuners, et s'embrase le soir venu.</p>
+                    <p class="lead" data-testid="concept-text-2">Banquettes rouges, bois brut, mezzanine industrielle et écran géant pour les grands matchs : une ambiance cosy et urbaine, familiale en journée, festive quand la nuit tombe.</p>
+                </div>
+                <!-- PHOTO CONCEPT : remplacez le bloc ci-dessous par votre photo de l'intérieur -->
+                <div class="photo-placeholder tall reveal" data-testid="concept-photo-placeholder">
+                    <img src="images/terrasse.jpg" alt="Terrasse" />
+                </div>
+            </div>
+            <div class="grid-3 moments">
+                <div class="card reveal" data-testid="concept-moment-0">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/></svg>
+                    <h3>Le matin</h3>
+                    <p>Café comptoir dès 7h30, presse du jour et première réunion en terrasse.</p>
+                </div>
+                <div class="card reveal" data-testid="concept-moment-1">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+                    <h3>La journée</h3>
+                    <p>Plats du jour, pizzas à la pâte fraîche et glaces artisanales en famille.</p>
+                </div>
+                <div class="card reveal" data-testid="concept-moment-2">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+                    <h3>Le soir</h3>
+                    <p>Cocktails signature, planches à partager et matchs sur grand écran.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== LA CARTE ==================== -->
+    <section id="carte" class="section section-alt" data-testid="menu-section">
+        <div class="container">
+            <div class="reveal">
+                <p class="kicker" data-testid="menu-label">La carte</p>
+                <h2 data-testid="menu-title">Nos spécialités</h2>
+                <p class="lead" data-testid="menu-subtitle">Quatre univers, une même envie : vous faire plaisir, à toute heure.</p>
+            </div>
+            <div class="grid-4">
+                <div class="card reveal" data-testid="menu-card-0">
+                    <svg class="icon copper" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3h14l-7 8-7-8Z"/><path d="M12 11v8"/><path d="M8 21h8"/></svg>
+                    <h3>Cocktails signature</h3>
+                    <ul>
+                        <li>Créations maison du bar</li>
+                        <li>Les classiques revisités</li>
+                        <li>Mocktails sans alcool</li>
+                    </ul>
+                </div>
+                <div class="card reveal" data-testid="menu-card-1">
+                    <svg class="icon brick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 3.5 20.5h17L12 2Z"/><circle cx="12" cy="13" r="1"/><circle cx="10" cy="17" r="1"/><circle cx="14" cy="17" r="1"/></svg>
+                    <h3>Pizzas</h3>
+                    <ul>
+                        <li>Pâte fraîche faite maison</li>
+                        <li>Margherita, Reine, 4 Fromages</li>
+                        <li>La pizza du moment</li>
+                    </ul>
+                </div>
+                <div class="card reveal" data-testid="menu-card-2">
+                    <svg class="icon mustard" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 2v20"/><path d="M5 2v6a2 2 0 0 0 4 0V2"/><path d="M17 2c-1.5 2-1.5 5 0 7v13"/><path d="M17 2v7"/></svg>
+                    <h3>Brasserie</h3>
+                    <ul>
+                        <li>Plats du jour le midi</li>
+                        <li>Burgers &amp; planches à partager</li>
+                        <li>Café comptoir dès 7h30</li>
+                    </ul>
+                </div>
+                <div class="card reveal" data-testid="menu-card-3">
+                    <svg class="icon copper" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m7 11 5 11 5-11"/><path d="M7 11a5 5 0 0 1 10 0"/></svg>
+                    <h3>Glaces</h3>
+                    <ul>
+                        <li>Parfums artisanaux</li>
+                        <li>Coupes gourmandes</li>
+                        <li>Cornets à emporter</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- BOUTON CARTE PDF : remplacez href="#" par le lien de votre PDF, ex. href="carte.pdf" -->
+            <div class="reveal">
+                <span class="btn btn-outline btn-disabled" data-testid="menu-pdf-button">Télécharger la carte — PDF bientôt disponible</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== GALERIE ==================== -->
+    <!-- GALERIE PHOTOS : remplacez chaque bloc "photo-placeholder" par
+         <img src="photos/votre-photo.jpg" alt="..." /> en gardant le bouton autour -->
+    <section id="galerie" class="section" data-testid="gallery-section">
+        <div class="container">
+            <div class="reveal">
+                <p class="kicker" data-testid="gallery-label">Galerie</p>
+                <h2 data-testid="gallery-title">L'ambiance <span class="text-copper">NOW WHY</span></h2>
+            </div>
+            <div class="gallery-grid">
+                <button class="gallery-item big reveal" data-testid="gallery-tile-0" data-label="Le bar incurvé rétroéclairé">
+                    <div class="photo-placeholder"><img src="images/bar_ incurvé.png" alt="bar"/></div>
+                </button>
+                <button class="gallery-item reveal" data-testid="gallery-tile-1" data-label="Banquettes rouges">
+                    <div class="photo-placeholder"><img src="images/banquette_rouge.png" alt="banquettes"/></div>
+                </button>
+                <button class="gallery-item reveal" data-testid="gallery-tile-2" data-label="La mezzanine">
+                    <div class="photo-placeholder"><img src="images/mezzanine.jpg" alt="Mezzanine"/></div>
+                </button>
+                <button class="gallery-item reveal" data-testid="gallery-tile-3" data-label="Cocktails signature">
+                    <div class="photo-placeholder"><img src="images/bouffe.png" alt="exemple de menu chez NowWhy"/></div>
+                </button>
+                <button class="gallery-item reveal" data-testid="gallery-tile-4" data-label="Pizzas maison">
+                    <div class="photo-placeholder"><img src="images/deuxverres.png" alt="apero chez NowWhy"/></div>
+                </button>
+                <button class="gallery-item reveal" data-testid="gallery-tile-5" data-label="L'écran événements sportifs">
+                    <div class="photo-placeholder"><img src="images/entrecote.jpg" alt="photo d'une entrecote"></div>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" data-testid="gallery-lightbox">
+        <button class="lightbox-close" id="lightbox-close" aria-label="Fermer" data-testid="lightbox-close-button">&times;</button>
+        <div class="lightbox-content" id="lightbox-content"></div>
+    </div>
+
+    <!-- ==================== AVIS ==================== -->
+    <section id="avis" class="section section-alt" data-testid="reviews-section">
+        <div class="container">
+            <div class="reviews-layout">
+                <div class="reveal">
+                    <p class="kicker" data-testid="reviews-label">Avis clients</p>
+                    <h2 data-testid="reviews-title">Ils parlent de nous</h2>
+                    <div class="score" data-testid="google-score">
+                        <span class="score-value" data-testid="google-score-value">4,0</span>
+                        <div>
+                            <div class="stars" aria-label="4 étoiles sur 5">★★★★<span class="star-off">★</span></div>
+                            <p class="score-count" data-testid="google-score-count">900+ avis Google</p>
+                        </div>
+                    </div>
+                    <a href="https://www.google.com/maps/search/?api=1&amp;query=NOW+WHY+Roanne" target="_blank" rel="noopener" class="link-copper" data-testid="google-reviews-link">Voir tous les avis sur Google →</a>
+                </div>
+                <div class="reviews-cards">
+                    <blockquote class="card reveal" data-testid="review-card-0">
+                        <p>« Super ambiance, le bar est magnifique et les cocktails au top. On y retourne entre collègues tous les jeudis ! »</p>
+                        <footer><strong>Camille R.</strong><span>Avis Google</span></footer>
+                    </blockquote>
+                    <blockquote class="card reveal" data-testid="review-card-1">
+                        <p>« Pizzas excellentes et service rapide le midi. La mezzanine est parfaite pour venir en groupe. »</p>
+                        <footer><strong>Julien M.</strong><span>Avis Google</span></footer>
+                    </blockquote>
+                    <blockquote class="card reveal wide" data-testid="review-card-2">
+                        <p>« Un lieu qui vit vraiment du matin au soir. Café le matin, planche et mojito le soir. Adresse incontournable à Roanne. »</p>
+                        <footer><strong>Sophie L.</strong><span>Avis Google</span></footer>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== HORAIRES & LOCALISATION ==================== -->
+    <section id="horaires" class="section" data-testid="hours-section">
+        <div class="container">
+            <div class="reveal">
+                <p class="kicker" data-testid="hours-label">Horaires &amp; localisation</p>
+                <h2 data-testid="hours-title">Venez nous <span class="text-copper">trouver</span></h2>
+            </div>
+            <div class="grid-2">
+                <div class="reveal">
+                    <div class="card">
+                        <h3 class="card-title-icon">
+                            <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                            Horaires d'ouverture
+                        </h3>
+                        <table class="hours-table" data-testid="hours-table">
+                            <tbody>
+                                <tr data-day="1" data-testid="hours-row-0"><td>Lundi</td><td>07h30 – 00h30</td></tr>
+                                <tr data-day="2" data-testid="hours-row-1"><td>Mardi</td><td>07h30 – 18h30</td></tr>
+                                <tr data-day="3" data-testid="hours-row-2"><td>Mercredi</td><td>07h30 – 00h30</td></tr>
+                                <tr data-day="4" data-testid="hours-row-3"><td>Jeudi</td><td>07h30 – 00h30</td></tr>
+                                <tr data-day="5" data-testid="hours-row-4"><td>Vendredi</td><td>07h30 – 00h30</td></tr>
+                                <tr data-day="6" data-testid="hours-row-5"><td>Samedi</td><td>09h00 – 00h30</td></tr>
+                                <tr data-day="0" data-testid="hours-row-6"><td>Dimanche</td><td>Fermé</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="card">
+                        <h3 class="card-title-icon">
+                            <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                            Adresse
+                        </h3>
+                        <p data-testid="address-text">12 Place de la Promenade Populle<br />42300 Roanne, France</p>
+                        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=NOW+WHY+12+Place+de+la+Promenade+Populle+42300+Roanne" target="_blank" rel="noopener" class="btn btn-primary btn-sm" data-testid="itinerary-button">Itinéraire</a>
+                    </div>
+                </div>
+                <div class="map-wrapper reveal">
+                    <iframe data-testid="google-map-iframe" title="NOW WHY — 12 Place de la Promenade Populle, 42300 Roanne"
+                        src="https://www.google.com/maps?q=NOW%20WHY%2012%20Place%20de%20la%20Promenade%20Populle%2042300%20Roanne&amp;output=embed"
+                        loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CONTACT ==================== -->
+    <section id="contact" class="section section-alt center" data-testid="contact-section">
+        <div class="container reveal">
+            <p class="kicker" data-testid="contact-label">Contact</p>
+            <h2 data-testid="contact-title">Une table, un match, un anniversaire ?</h2>
+            <p class="lead" data-testid="contact-subtitle">Appelez-nous directement — on vous répond du café du matin au dernier service.</p>
+            <a href="tel:0477713096" class="big-phone neon" data-testid="contact-phone-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                04 77 71 30 96
+            </a>
+            <div class="socials">
+                <!-- FACEBOOK : remplacez href="#" par l'adresse de votre page -->
+                <a href="https://www.instagram.com/nowwhybrasserie/" target="_blank" rel="noopener" aria-label="Instagram NOW WHY" data-testid="instagram-link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=61590418957963" aria-label="Facebook NOW WHY " data-testid="facebook-link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer" data-testid="site-footer">
+        <div class="container footer-grid">
+            <div>
+                <p class="logo" data-testid="footer-logo">NOW <span>WHY</span></p>
+                <p class="muted">Brasserie · Pizzeria · Cocktails · Glacier.<br />Du café du matin aux cocktails du soir.</p>
+            </div>
+            <div>
+                <h4>Adresse</h4>
+                <p class="muted" data-testid="footer-address">12 Place de la Promenade Populle<br />42300 Roanne, France</p>
+            </div>
+            <div>
+                <h4>Horaires</h4>
+                <p class="muted" data-testid="footer-hours">Lun – Ven : 07h30 – 00h30<br />Mardi : 07h30 – 18h30<br />Samedi : 09h00 – 00h30<br />Dimanche : Fermé</p>
+            </div>
+            <div>
+                <h4>Suivez-nous</h4>
+                <p><a href="tel:0477713096" class="muted-link" data-testid="footer-phone-link">04 77 71 30 96</a></p>
+                <div class="socials small">
+                    <a href="https://www.instagram.com/nowwhybrasserie/" target="_blank" rel="noopener" aria-label="Instagram" data-testid="footer-instagram-link">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=61590418957963" aria-label="Facebook" data-testid="footer-facebook-link">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container footer-bottom-inner">
+                <p data-testid="footer-copyright">© 2026 NOW WHY — Roanne. Tous droits réservés.</p>
+                <a href="#" data-testid="footer-legal-link">Mentions légales</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
