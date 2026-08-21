@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<!--
+  MODÈLE — Mentions légales & Politique de confidentialité
+  À réutiliser pour chaque site de bar / brasserie.
+
+  Checklist rapide des infos à demander au client avant de remplir :
+  - Nom + forme juridique (SARL, EURL, auto-entrepreneur...) + adresse du siège
+  - SIRET / RCS / n° TVA intracommunautaire si applicable
+  - Nom de l'hébergeur du site (OVH, o2switch, Hostinger, Vercel...)
+  - Adresse e-mail à utiliser pour les demandes RGPD
+  - Pseudo(s) Instagram / Facebook si des liens réseaux sociaux sont présents
+
+  Version pensée pour un site vitrine sans formulaire ni compte utilisateur :
+  liens réseaux sociaux + carte Google Maps intégrée + numéro de téléphone.
+  Si un jour un client ajoute un formulaire de contact, une réservation en
+  ligne ou un outil de stats (Analytics), il faudra rajouter un article
+  décrivant les données alors collectées dans la partie confidentialité.
+
+  Tous les champs à compléter sont écrits entre crochets [COMME ÇA].
+  Un script en bas de page les détecte automatiquement, les surligne,
+  et affiche un tampon "brouillon" tant qu'il en reste. Le tampon disparaît
+  tout seul (et n'apparaît jamais sur la version finale) une fois que tous
+  les crochets ont été remplacés par du texte réel.
+-->
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mentions légales & Politique de confidentialité — [NOM DE L'ÉTABLISSEMENT]</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,900&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper: #F1ECDD;
+    --paper-line: #E4DCC4;
+    --ink: #221F1A;
+    --ink-muted: #6B6455;
+    --accent: #2F4B3C;
+    --accent-warn: #A8431D;
+    --hairline: #CBBF9E;
+    --font-display: 'Fraunces', Georgia, serif;
+    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, monospace;
+  }
+
+  * { box-sizing: border-box; }
+
+  body{
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap{
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 64px 24px 96px;
+  }
+
+  header.doc-head{
+    margin-bottom: 40px;
+  }
+
+  .eyebrow{
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 14px;
+  }
+
+  h1{
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: clamp(1.7rem, 4vw, 2.5rem);
+    line-height: 1.15;
+    margin: 0 0 10px;
+    letter-spacing: -0.01em;
+  }
+
+  .subtitle{
+    color: var(--ink-muted);
+    font-size: 0.98rem;
+    margin: 0;
+  }
+
+  .updated{
+    font-family: var(--font-mono);
+    font-size: 0.82rem;
+    color: var(--ink-muted);
+    margin-top: 18px;
+  }
+
+  nav.toc{
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin: 32px 0 8px;
+    padding: 16px 0;
+    border-top: 1px solid var(--hairline);
+    border-bottom: 1px solid var(--hairline);
+  }
+
+  nav.toc a{
+    font-family: var(--font-mono);
+    font-size: 0.82rem;
+    color: var(--accent);
+    text-decoration: none;
+    letter-spacing: 0.02em;
+  }
+
+  nav.toc a:hover{ text-decoration: underline; }
+
+  section.group{
+    margin-top: 56px;
+  }
+
+  .group-title{
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin: 0 0 6px;
+  }
+
+  .group-intro{
+    color: var(--ink-muted);
+    margin: 0 0 28px;
+    font-size: 0.96rem;
+  }
+
+  article.rule{
+    padding: 28px 0;
+    border-top: 1px solid var(--paper-line);
+  }
+
+  article.rule:first-of-type{
+    border-top: 1px solid var(--hairline);
+  }
+
+  .rule-num{
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    color: var(--accent);
+    letter-spacing: 0.06em;
+    margin: 0 0 6px;
+  }
+
+  h3{
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.15rem;
+    margin: 0 0 12px;
+  }
+
+  article.rule p{
+    margin: 0 0 12px;
+  }
+
+  article.rule p:last-child{ margin-bottom: 0; }
+
+  ul.plain{
+    margin: 0 0 12px;
+    padding-left: 20px;
+  }
+
+  ul.plain li{ margin-bottom: 6px; }
+
+  .id-block{
+    font-size: 0.95rem;
+    background: rgba(47,75,60,0.05);
+    border: 1px solid var(--paper-line);
+    border-radius: 6px;
+    padding: 16px 18px;
+    margin: 4px 0 14px;
+  }
+
+  .id-block div{ margin-bottom: 4px; }
+  .id-block div:last-child{ margin-bottom: 0; }
+
+  .note{
+    font-size: 0.85rem;
+    color: var(--ink-muted);
+    font-style: italic;
+  }
+
+  mark.tofill{
+    background: rgba(168,67,29,0.14);
+    color: var(--accent-warn);
+    font-family: var(--font-mono);
+    font-weight: 500;
+    font-size: 0.92em;
+    padding: 0.05em 0.4em;
+    border-radius: 3px;
+    border-bottom: 1px dashed var(--accent-warn);
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+  }
+
+  footer.doc-foot{
+    margin-top: 56px;
+    padding-top: 24px;
+    border-top: 1px solid var(--hairline);
+    font-size: 0.82rem;
+    color: var(--ink-muted);
+  }
+
+  .stamp{
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 176px;
+    padding: 14px 8px;
+    text-align: center;
+    color: var(--accent-warn);
+    background: rgba(241,236,221,0.94);
+    border: 3px solid var(--accent-warn);
+    outline: 1px solid var(--accent-warn);
+    outline-offset: 4px;
+    border-radius: 4px;
+    transform: rotate(-7deg);
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    mix-blend-mode: multiply;
+    z-index: 999;
+    pointer-events: none;
+  }
+
+  .stamp strong{
+    display: block;
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    letter-spacing: 0.03em;
+    text-transform: none;
+    margin-bottom: 4px;
+  }
+
+  .stamp span{
+    display: block;
+    font-size: 0.68rem;
+    line-height: 1.3;
+  }
+
+  @media (max-width: 560px){
+    .wrap{ padding: 40px 18px 80px; }
+    .stamp{ width: 148px; right: 14px; bottom: 14px; padding: 10px 6px; }
+    .stamp strong{ font-size: 1.05rem; }
+  }
+
+  @media print{
+    .stamp{ display: none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header class="doc-head">
+    <p class="eyebrow">Document légal</p>
+    <h1>Mentions légales & Politique de confidentialité</h1>
+    <p class="subtitle">[NOM DE L'ÉTABLISSEMENT] — [URL DU SITE]</p>
+    <p class="updated">Dernière mise à jour : [DATE DE MISE À JOUR]</p>
+  </header>
+
+  <nav class="toc">
+    <a href="#mentions-legales">→ Mentions légales</a>
+    <a href="#confidentialite">→ Politique de confidentialité</a>
+  </nav>
+
+  <!-- ================= MENTIONS LÉGALES ================= -->
+  <section class="group" id="mentions-legales">
+    <h2 class="group-title">Mentions légales</h2>
+    <p class="group-intro">Conformément à la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique, il est précisé aux utilisateurs de ce site l'identité des différents intervenants dans le cadre de sa réalisation et de son suivi.</p>
+
+    <article class="rule">
+      <p class="rule-num">Article 1</p>
+      <h3>Éditeur du site</h3>
+      <p>Le présent site est édité par :</p>
+      <div class="id-block">
+        <div><strong>[NOM DE L'ÉTABLISSEMENT]</strong></div>
+        <div>[FORME JURIDIQUE — SARL / EURL / entreprise individuelle...]</div>
+        <div>Capital social : [MONTANT] € <span class="note">(si société)</span></div>
+        <div>Siège social : [ADRESSE COMPLÈTE]</div>
+        <div>SIRET : [NUMÉRO SIRET]</div>
+        <div>RCS : [VILLE] [NUMÉRO RCS]</div>
+        <div>N° TVA intracommunautaire : [NUMÉRO TVA] <span class="note">(si applicable)</span></div>
+        <div>Téléphone : [NUMÉRO DE TÉLÉPHONE]</div>
+        <div>E-mail : [ADRESSE E-MAIL DE CONTACT]</div>
+        <div>Directeur de la publication : [NOM ET PRÉNOM]</div>
+      </div>
+    </article>
+
+    <article class="rule">
+      <p class="rule-num">Article 2</p>
+      <h3>Hébergement</h3>
+      <p>Le site est hébergé par :</p>
+      <div class="id-block">
+        <div><strong>[NOM DE L'HÉBERGEUR]</strong></div>
+        <div>[ADRESSE DE L'HÉBERGEUR]</div>
+        <div>[TÉLÉPHONE DE L'HÉBERGEUR]</div>
+        <div>[SITE WEB DE L'HÉBERGEUR]</div>
+      </div>
+    </article>
+
+    <article class="rule">
+      <p class="rule-num">Article 3</p>
+      <h3>Conception et réalisation</h3>
+      <p>Ce site a été conçu et développé par [TON NOM / NOM DE TON ACTIVITÉ] — [SITE WEB OU CONTACT].</p>
+      <p class="note">Section facultative — à supprimer si tu ne souhaites pas apparaître dans les mentions légales du client.</p>
+    </article>
+
+    <article class="rule">
+      <p class="rule-num">Article 4</p>
+      <h3>Propriété intellectuelle</h3>
+      <p>L'ensemble des éléments composant ce site (textes, photographies, logos, illustrations, charte graphique) est la propriété exclusive de [NOM DE L'ÉTABLISSEMENT], sauf mention contraire. Toute reproduction, représentation ou exploitation totale ou partielle de ces éléments, par quelque procédé que ce soit, sans autorisation écrite préalable, est interdite.</p>
+    </article>
+
+    <article class="rule">
+      <p class="rule-num">Article 5</p>
+      <h3>Liens hypertextes et contenus externes</h3>
+      <p>Ce site peut contenir des liens vers des sites tiers (réseaux sociaux, Google Maps, partenaires). [NOM DE L'ÉTABLISSEMENT] n'exerce aucun contrôle sur ces sites et décline toute responsabilité quant à leur contenu.</p>
+    </article>
+
+    <article class="rule">
+      <p class="rule-num">Article 6</p>
+      <h3>Droit applicable et litiges</h3>
+      <p>Les présentes mentions légales sont soumises au droit français. En cas de litige et à défaut de résolution amiable, les tribunaux français seront seuls compétents.</p>
+    </article>
+  </section>
+
+  <!-- ================= POLITIQUE DE CONFIDENTIALITÉ ================= -->
+  <section class="group" id="confidentialite">
+    <h2 class="group-title">Politique de confidentialité</h2>
+    <p class="group-intro">[NOM DE L'ÉTABLISSEMENT] a à cœur de respecter votre vie privée. Ce site est un site vitrine : il ne comporte ni formulaire, ni compte utilisateur, ni service en ligne. Nous ne collectons donc aucune donnée que vous nous transmettriez volontairement. Cette politique décrit les seules données traitées : celles générées automatiquement par votre navigation et celles liées aux services tiers intégrés au site.</p>
+
+    <article class="rule">
+      <p class="rule-num">Article 7</p>
+      <h3>Responsable du traitement</h3>
+      <p>Le responsable du traitement est [NOM DE L'ÉTABLISSEMENT], [ADRESSE], joignable à l'adresse [E-MAIL DE CONTACT RGPD].</p>
+    </article>
+
+    <article class="rule">
+      <p class="rule-num">Article 8</p>
+      <h3>Données collectées automatiquement</h3>
+      <p>Ce site ne comportant aucun formulaire, nous ne recueillons aucune information que vous nous transmettriez directement. Lors de votre navigation, notre hébergeur collecte toutefois automatiquement certaines données techniques nécessaires au fonctionnement et à la sécurité du site : adresse IP, date et heure de connexion, pages consultées, type de navigateur. Ces données sont conservées pendant [DURÉE — ex : 12 mois], conformément aux obligations légales de conservation des données de connexion.</p>
+    </article>
+
+    <article class="rule">
+      <p class="rule-num">Article 9</p>
+      <h3>Carte Google Maps</h3>
+      <p>Ce site intègre une carte Google Maps afin de vous indiquer notre emplacement. Le chargement de cette carte peut entraîner le dépôt de cookies par Google et la collecte de données de navigation, indépendamment de notre volonté. Nous vous invitons à consulter la politique de confidentialité de Google à l'adresse policies.google.com/privacy.</p>
+    </article>
+
+    <article class="rule">
+      <p class="rule-num">Article 10</p>
+      <h3>Liens vers les réseaux sociaux</h3>
+      <p>Ce site contient des liens vers nos pages [INSTAGRAM / FACEBOOK / AUTRE]. Il s'agit de simples liens de redirection : aucune donnée n'est collectée par notre site lorsque vous cliquez dessus. Une fois sur ces plateformes, c'est leur propre politique de confidentialité qui s'applique.</p>
+    </article>
+
+    <article class="rule">
+      <p class="rule-num">Article 11</p>
+      <h3>Vos droits et contact</h3>
+      <p>Conformément au RGPD, vous disposez d'un droit d'accès, de rectification, d'effacement, de limitation et d'opposition sur les données vous concernant. Pour exercer ces droits, contactez-nous à [E-MAIL DE CONTACT RGPD] ou par courrier à [ADRESSE POSTALE]. Vous pouvez également introduire une réclamation auprès de la CNIL (www.cnil.fr).</p>
+    </article>
+  </section>
+
+  <footer class="doc-foot">
+    <p>[NOM DE L'ÉTABLISSEMENT] — [ADRESSE COMPLÈTE] — [E-MAIL DE CONTACT]</p>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  var PLACEHOLDER = /\[[^\[\]]{2,120}\]/g;
+
+  function highlight(){
+    var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
+      acceptNode: function(node){
+        var parent = node.parentNode;
+        if (!parent || parent.tagName === 'SCRIPT' || parent.tagName === 'STYLE') {
+          return NodeFilter.FILTER_REJECT;
+        }
+        PLACEHOLDER.lastIndex = 0;
+        return PLACEHOLDER.test(node.nodeValue) ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT;
+      }
+    });
+
+    var nodes = [];
+    var n;
+    while ((n = walker.nextNode())) nodes.push(n);
+
+
+    nodes.forEach(function(node){
+      var text = node.nodeValue;
+      var frag = document.createDocumentFragment();
+      var lastIndex = 0;
+      var match;
+      PLACEHOLDER.lastIndex = 0;
+
+      while ((match = PLACEHOLDER.exec(text)) !== null) {
+        if (match.index > lastIndex) {
+          frag.appendChild(document.createTextNode(text.slice(lastIndex, match.index)));
+        }
+        var mark = document.createElement('mark');
+        mark.className = 'tofill';
+        mark.textContent = match[0];
+        frag.appendChild(mark);
+        lastIndex = PLACEHOLDER.lastIndex;
+      }
+      if (lastIndex < text.length) {
+        frag.appendChild(document.createTextNode(text.slice(lastIndex)));
+      }
+      node.parentNode.replaceChild(frag, node);
+    });
+
+    
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', highlight);
+  } else {
+    highlight();
+  }
+})();
+</script>
+
+</body>
+</html>
